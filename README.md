@@ -1,2 +1,0 @@
-# popularne-frameworki-js
-projekt
