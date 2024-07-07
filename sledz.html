@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<h2>Wubierz pojazd:</h2>
+
+    <form>
+        <select id="photoSelect" onchange="showSelectedPhoto()"> <!--należy chwilę poczekać niestety-->
+            <option value="">pojazd 2- niedostępny</option>
+            
+            <option value="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8223.420119984883!2d20.587983377379793!3d52.21000176043174!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47194dbc2b363699%3A0xf76112dbd10da57b!2sXBS%20Logistics%20S.A!5e0!3m2!1spl!2spl!4v1719585034843!5m2!1spl!2spl"  width="600" height="450" style="border:0;" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade">pojazd 1</option>
+          
+        </select>
+    </form>
+
+    <div class="container">
+
+        <div id="selectedPhoto1"></div>
+    </div>
+
+    <script>
+        function showSelectedPhoto() {
+            const select = document.getElementById("photoSelect");
+            const selectedValue = select.value;
+            const photoDiv = document.getElementById("selectedPhoto1");
+            if (selectedValue) {
+                photoDiv.innerHTML = `<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8223.420119984883!2d20.587983377379793!3d52.21000176043174!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47194dbc2b363699%3A0xf76112dbd10da57b!2sXBS%20Logistics%20S.A!5e0!3m2!1spl!2spl!4v1719585034843!5m2!1spl!2spl" width="600" height="450" style="border:0;" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade"></iframe>` ;
+            } else {
+                photoDiv.innerHTML = ""; 
+            }
+        }
+    </script>
+</body>
+</html>

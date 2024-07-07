@@ -1,0 +1,83 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" 
+     rel="stylesheet"> <!-- Bootstrap-->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    
+    <title>pop. frameworki- projekt</title>
+     <!-- Dodanie Bootstrap -->
+     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            
+            <ul class="menu" id="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sledz.html">Śledź pojazd</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+                <li><a href="memory.html">Memory</a></li>
+       
+            </ul>
+        </nav>
+    </header>
+    <main id="app">
+        <section>
+            <h1>{{ title }}</h1>
+            <br>
+        </section>
+        <section>
+            <h2>{{ aboutTitle }}</h2>
+           <strong><p>{{ aboutMessage }}</p></strong>
+        </section>
+        <section>
+            <h2>{{ servicesTitle }}</h2>
+            <ul>
+                <li v-for="service in services">{{ service }}</li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <hr>
+        <p>&copy; Firma transportowa autor: Kamil Babikowski</p>
+    </footer>
+         <!-- Vue.js CDN -->
+         <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+         <!-- Bootstrap JS (opcjonalnie) -->
+         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        
+        
+        new Vue({
+            el: '#app',
+            data: {
+                title: 'Skorzystaj z naszych usług!',
+                aboutTitle: 'O nas',
+                aboutMessage: 'Jesteśmy firmą transportową z siedzibą w Piastowie',
+                servicesTitle: 'Nasze usługi',
+                services: [
+                    'Przewieziony towar zawsze na czas',
+                    'Przewozy krajowe i zagraniczne',
+                    'Linia telefoniczna 6:00- 23:00',
+                    'Gwarancja satysfakcji :)'
+
+
+                ]
+            }
+        });
+    </script>
+</body>
+</html>
